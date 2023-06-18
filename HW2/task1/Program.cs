@@ -1,9 +1,20 @@
-﻿// Console.WriteLine("Введите трехзначное число ");
-// string num = Console.ReadLine();
-// int sec = Convert.ToInt32(num);
-// Console.WriteLine(sec % 1000);
+﻿Console.WriteLine("Введите трехзначное число");
+int number = Convert.ToInt32(Console.ReadLine());
+int amount = number.ToString().Length;
 
-Console.WriteLine("Введите трехзначное число ");
-string input = Console.ReadLine();
-int number = int.Parse(input);
-Console.WriteLine(number % 10);
+if (amount < 3 || amount > 3)
+{
+    Console.WriteLine("Вы ввели не трехзначное число");
+}
+else
+{
+    Console.WriteLine(SecNum(number));
+}
+
+
+int SecNum(int a)
+{
+    
+    int result = ((a / 10) % 10);
+    return result;
+}
